@@ -1,0 +1,52 @@
+td#main-panel {
+	counter-reset: line-numbering;
+}
+pre a.linenumber::before {
+	content: counter(line-numbering);
+	counter-increment: line-numbering;
+	padding-right: 1em;
+	text-align: right;
+}
+
+pre div.fold {
+	height:16px;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+pre div.fold .fold-name {
+	position: absolute;
+	display:block;
+	right:12px;
+	margin-top:2px;
+	padding: 0 7px 2px;
+	line-height:10px;
+	font-size:10px;
+	background-color : rgb(102, 102, 102)
+	border-radius: 6px;
+	color: rgb(187,187,187);
+}
+
+pre div.fold.open {
+	height:auto;
+	display:inline;
+}
+
+pre a.linenumber {
+	text-decoration: none;
+}
+
+p.line {
+	display:inline;
+	white-space:nowrap;
+	font-family:monospace;
+}
+
+pre p,pre span {
+	margin: 0;
+	padding: 0;
+}
+
+pre p.line:hover {
+	background-color: rgb(200, 200, 200) !important;
+}

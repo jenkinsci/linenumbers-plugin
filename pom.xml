@@ -12,7 +12,7 @@
   
   <name>Line Numbers plugin</name>
   <description>This decorates the console with line numbers and collapses build steps</description>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/LineNumber+Plugin</url>
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/Line+Numbers+Plugin</url>
   
   <developers>
     <developer>
@@ -56,11 +56,11 @@
   
   <distributionManagement>
     <repository>
-      <id>maven.jenkins-ci.org</id>
+      <id>repo.jenkins-ci.org</id>
       <url>http://repo.jenkins-ci.org/releases</url>
     </repository>
     <snapshotRepository>
-      <id>maven.jenkins-ci.org</id>
+      <id>repo.jenkins-ci.org</id>
       <url>http://repo.jenkins-ci.org/snapshots</url>
     </snapshotRepository>
   </distributionManagement>

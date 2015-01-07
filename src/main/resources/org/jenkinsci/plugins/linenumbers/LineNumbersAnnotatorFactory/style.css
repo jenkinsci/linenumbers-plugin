@@ -1,4 +1,4 @@
-td#main-panel {
+#main-panel {
 	counter-reset: line-numbering;
 }
 pre a.linenumber::before {

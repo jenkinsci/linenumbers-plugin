@@ -42,6 +42,12 @@ p.line {
 	font-family:monospace;
 }
 
+p.empty {
+	display:block;
+	white-space:nowrap;
+	font-family:monospace;
+}
+
 pre p,pre span {
 	margin: 0;
 	padding: 0;

@@ -59,10 +59,17 @@ public class LineNumbersAnnotator extends ConsoleAnnotator<Object> {
       calls++;
       int end = text.length() - 1;
 
-      // Trick to make sure we wrap everything including the Timestamp from Timestamper plugin
-      text.addMarkup(0, 0, "",
-          MessageFormat.format("<p class=\"line\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));
-      text.addMarkup(end, end, "", "</span></p>");
+      if (text.getText().matches("^\\s$")) {
+        // Trick to make sure we wrap everything including the Timestamp from Timestamper plugin
+        text.addMarkup(0, 0, "",
+            MessageFormat.format("<p class=\"empty\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));
+        text.addMarkup(end, end, "", "</span></p>");
+        System.out.println("Hit");
+      } else {
+        text.addMarkup(0, 0, "",
+            MessageFormat.format("<p class=\"line\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));
+        text.addMarkup(end, end, "", "</span></p>");
+      }
     }
     return this;
   }

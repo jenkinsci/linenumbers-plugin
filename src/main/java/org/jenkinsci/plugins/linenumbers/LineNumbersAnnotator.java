@@ -64,7 +64,6 @@ public class LineNumbersAnnotator extends ConsoleAnnotator<Object> {
         text.addMarkup(0, 0, "",
             MessageFormat.format("<p class=\"empty\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));
         text.addMarkup(end, end, "", "</span></p>");
-        System.out.println("Hit");
       } else {
         text.addMarkup(0, 0, "",
             MessageFormat.format("<p class=\"line\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));

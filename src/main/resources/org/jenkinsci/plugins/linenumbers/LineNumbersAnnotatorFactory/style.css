@@ -8,30 +8,6 @@ pre a.linenumber::before {
 	text-align: right;
 }
 
-pre div.fold {
-	height:16px;
-	overflow:hidden;
-	cursor:pointer;
-}
-
-pre div.fold .fold-name {
-	position: absolute;
-	display:block;
-	right:12px;
-	margin-top:2px;
-	padding: 0 7px 2px;
-	line-height:10px;
-	font-size:10px;
-	background-color : rgb(102, 102, 102)
-	border-radius: 6px;
-	color: rgb(187,187,187);
-}
-
-pre div.fold.open {
-	height:auto;
-	display:inline;
-}
-
 pre a.linenumber {
 	text-decoration: none;
 }

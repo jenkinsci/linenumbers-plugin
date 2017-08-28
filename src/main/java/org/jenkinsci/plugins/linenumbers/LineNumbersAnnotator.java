@@ -58,17 +58,13 @@ public class LineNumbersAnnotator extends ConsoleAnnotator<Object> {
     if (start <= 0) { // only annotate if we are handling the full log
       calls++;
       int end = text.length() - 1;
-
+      String cssClasses = "line";
       if (text.getText().matches("^\\s$")) {
         // Trick to make sure we wrap everything including the Timestamp from Timestamper plugin
-        text.addMarkup(0, 0, "",
-            MessageFormat.format("<p class=\"empty\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));
-        text.addMarkup(end, end, "", "</span></p>");
-      } else {
-        text.addMarkup(0, 0, "",
-            MessageFormat.format("<p class=\"line\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));
-        text.addMarkup(end, end, "", "</span></p>");
+        cssClasses = cssClasses + " empty";
       }
+      text.addMarkup(0, 0, "", MessageFormat.format("<p class=\"{1}\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls, cssClasses));
+      text.addMarkup(end, end, "", "</span></p>");
     }
     return this;
   }

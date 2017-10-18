@@ -23,5 +23,5 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <div>
-  This plugin adds line numbers and collapses buildsteps.
+  This plugin adds line numbers.
 </div>

@@ -11,7 +11,7 @@
   <packaging>hpi</packaging>
   
   <name>Line Numbers plugin</name>
-  <description>This decorates the console with line numbers and collapses build steps</description>
+  <description>This decorates the console with line numbers</description>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Line+Numbers+Plugin</url>
   
   <developers>

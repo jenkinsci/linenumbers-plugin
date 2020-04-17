@@ -14,7 +14,7 @@ pre a.linenumber {
 
 p.line {
 	display:inline;
-	white-space:nowrap;
+	white-space:normal;
 	font-family:monospace;
 }
 

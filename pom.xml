@@ -3,30 +3,34 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.32</version>
+    <version>4.24</version>
   </parent>
 
   <artifactId>linenumbers</artifactId>
   <version>1.3-SNAPSHOT</version>
   <packaging>hpi</packaging>
-  
+
   <name>Line Numbers plugin</name>
   <description>This decorates the console with line numbers</description>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/Line+Numbers+Plugin</url>
-  
+  <url>https://plugins.jenkins.io/linenumbers</url>
+
+  <properties>
+    <java.level>8</java.level>
+  </properties>
+
   <developers>
     <developer>
       <id>vlatombe</id>
       <name>Vincent Latombe</name>
     </developer>
   </developers>
-  
+
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
-  
+
   <licenses>
     <license>
       <name>The MIT license</name>
@@ -49,7 +53,7 @@
       <url>https://repo.jenkins-ci.org/public/</url>
     </pluginRepository>
   </pluginRepositories>
-  
+
   <distributionManagement>
     <repository>
       <id>repo.jenkins-ci.org</id>

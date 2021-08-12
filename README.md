@@ -1,1 +1,1 @@
-http://wiki.jenkins-ci.org/display/JENKINS/LineNumber
+https://plugins.jenkins.io/linenumbers

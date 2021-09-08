@@ -1,18 +1,18 @@
 /*
  * The MIT License
- * 
+ *
  * Copyright (c) 2014, Vincent Latombe
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,20 +26,21 @@ package org.jenkinsci.plugins.linenumbers;
 import hudson.Extension;
 import hudson.console.ConsoleAnnotator;
 import hudson.console.ConsoleAnnotatorFactory;
+import hudson.model.Run;
 
 import org.kohsuke.stapler.Stapler;
 import org.kohsuke.stapler.StaplerRequest;
 
 /**
  * Adds line numbers to the console logs as well as bookmarkable anchors
- * 
+ *
  * @author vlatombe
- * 
+ *
  */
 @Extension(ordinal = -100)
-public class LineNumbersAnnotatorFactory extends ConsoleAnnotatorFactory<Object> {
+public class LineNumbersAnnotatorFactory extends ConsoleAnnotatorFactory<Run<?, ?>> {
   @Override
-  public ConsoleAnnotator<Object> newInstance(Object context) {
+  public ConsoleAnnotator<Run<?, ?>> newInstance(Run<?, ?> context) {
     long offset = getOffset(Stapler.getCurrentRequest());
     return new LineNumbersAnnotator(offset);
   }
@@ -49,7 +50,7 @@ public class LineNumbersAnnotatorFactory extends ConsoleAnnotatorFactory<Object>
    * is from the start of the file, and a negative offset is back from the end
    * of the file.
    * Note : Copied from hudson.plugins.timestamper.annotator.TimestampAnnotatorFactory
-   * 
+   *
    * @param request
    * @return the offset in bytes
    */
